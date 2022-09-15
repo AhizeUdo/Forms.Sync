@@ -19,6 +19,12 @@ document.getElementById('book-form').addEventListener('submit', function(e) {
 
     const book = new Book(title, author , isbn)
 
+    const ui = new UI();
+
+    if(title === '' || author === ''|| isbn == ''){
+        ui.alertMessage('Pleasse fill all fields')
+    }
+
     e.preventDefault();
 
     UI.prototype.alertMessage = function(message, className) {
@@ -28,6 +34,10 @@ document.getElementById('book-form').addEventListener('submit', function(e) {
         div.appendChild(document.createTextNode(message));
         div.className = `alert${className}`;
         container.insertBefore(div, form)
+
+        setTimeout(() => {
+            document.querySelector('.alert').remove()
+        }, 2000);
     }
 });
 
