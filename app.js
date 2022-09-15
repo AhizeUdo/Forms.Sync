@@ -20,6 +20,13 @@ document.getElementById('book-form').addEventListener('submit', function(e) {
     const book = new Book(title, author , isbn)
 
     e.preventDefault();
+
+    UI.prototype.alertMessage = function(message, className) {
+        const container = document.querySelector('.container');
+        const form = document.querySelector('form');
+        const div = document.createElement('div');
+        
+    }
 });
 
 
