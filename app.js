@@ -25,7 +25,9 @@ document.getElementById('book-form').addEventListener('submit', function(e) {
         const container = document.querySelector('.container');
         const form = document.querySelector('form');
         const div = document.createElement('div');
-        
+        div.appendChild(document.createTextNode(message));
+        div.className = `alert${className}`;
+        container.insertBefore(div, form)
     }
 });
 
