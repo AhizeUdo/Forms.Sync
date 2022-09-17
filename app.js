@@ -175,3 +175,8 @@ document.getElementById('book-list').addEventListener('click', function (e) {
 
     e.preventDefault();
 });
+
+
+
+
+//One has to study and pratice this coding well 
